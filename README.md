@@ -47,5 +47,8 @@ prophet_plot_components(m, forecast)
 - See more information on data frame ```forecast```
 ```
 str(forecast)
+tail(forecast)
+head(forecast)
+
 ```
 
