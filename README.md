@@ -1,21 +1,22 @@
-# open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
-# run BC Ferries data for specific sailing time and route
-# prerequisites
+# Run example forecast of ferry load for one specificed sailing
+- open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
+- run BC Ferries data for specific sailing time and route
+- install prerequisites
 install.packages("prophet")
 install.packages("dplyr")
-# run
+- run learning routine
 library(prophet)
 library(dplyr)
 m <- prophet(df)
 df <- read.csv('C:/Users/aroug/Source/Repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
-# view sample data
+- view sample data
 class(df$ds)
 class(df$y)
 head(df$y)
 head(df$ds)
 tail(df$y)
 tail(df$ds)
-# create forecast: to forecast loading transform to exp(y)
+- create forecast: to forecast loading transform to exp(y)
 future <- make_future_dataframe(m, periods = 7)
 tail(future)
 forecast <- predict(m, future)
