@@ -50,6 +50,6 @@ str(forecast)
 tail(forecast)
 head(forecast)
 names(forecast)
-
+dim(forecast) # no of rows and cols
 ```
 
