@@ -44,3 +44,8 @@ tail(forecast[c('ds', 'yhat', 'yhat_lower', 'yhat_upper')])
 plot(m, forecast)
 prophet_plot_components(m, forecast)
 ```
+- See more information on data frame ```forecast```
+```
+str(forecast)
+```
+
