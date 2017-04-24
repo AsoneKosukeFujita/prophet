@@ -52,7 +52,7 @@ head(forecast)
 names(forecast)
 dim(forecast) # no of rows and cols
 ```
-- Investigate the specific log values of the forecast load ```yhat```
+- Investigate the specific values of the (log of) forecast load ```yhat```
 ```
 forecast$yhat
 ```
