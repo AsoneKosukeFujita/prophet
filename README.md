@@ -56,3 +56,7 @@ dim(forecast) # no of rows and cols
 ```
 forecast$yhat
 ```
+- Calculate the load % forecast by exponentiating the above values
+```
+exp(forecast$yhat)
+```
