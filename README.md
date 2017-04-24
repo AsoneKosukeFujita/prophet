@@ -13,7 +13,12 @@ library(dplyr)
 m <- prophet(df)
 df <- read.csv('C:/Users/aroug/Source/Repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
 ```
-- view sample data
+- view learning data
+```
+m
+df
+```
+- Selections of learning data
 ```
 class(df$ds)
 class(df$y)
@@ -27,6 +32,11 @@ tail(df$ds)
 future <- make_future_dataframe(m, periods = 7)
 tail(future)
 forecast <- predict(m, future)
+```
+View the output data
+```
+future
+forecast
 tail(forecast[c('ds', 'yhat', 'yhat_lower', 'yhat_upper')])
 ```
 - plot the (natural logarithm of) results
