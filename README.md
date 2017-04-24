@@ -3,14 +3,14 @@
 - run historical ferry loading data for specific sailing time and route
 - install prerequisites
 > install.packages("prophet")
-install.packages("dplyr")
+> install.packages("dplyr")
 - run learning routine
-library(prophet)
-library(dplyr)
-m <- prophet(df)
-df <- read.csv('C:/Users/aroug/Source/Repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
+> library(prophet)
+> library(dplyr)
+> m <- prophet(df)
+> df <- read.csv('C:/Users/aroug/Source/Repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
 - view sample data
-class(df$ds)
+> class(df$ds)
 class(df$y)
 head(df$y)
 head(df$ds)
