@@ -1,4 +1,4 @@
-# Run example forecast of ferry load for one specified sailing and route
+# Example forecast of ferry load for one specified sailing and route
 - Open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
 - Run historical ferry load data for specific sailing time and route
 - Install prerequisites
