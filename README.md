@@ -60,3 +60,8 @@ forecast$yhat
 ```
 exp(forecast$yhat)
 ```
+- Create a new data frame with only the future dates and forecast of load %
+```
+df1 <- data.frame(forecast$ds,exp(forecast$yhat))
+df1
+```
