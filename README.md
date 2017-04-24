@@ -1,6 +1,6 @@
-# Run example forecast of ferry load for one specificed sailing
+# Run example forecast of ferry load for one specified sailing and route
 - open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
-- run BC Ferries data for specific sailing time and route
+- run historical ferry loading data for specific sailing time and route
 - install prerequisites
 install.packages("prophet")
 install.packages("dplyr")
