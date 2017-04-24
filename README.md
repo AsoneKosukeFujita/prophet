@@ -22,12 +22,15 @@ head(df$ds)
 tail(df$y)
 tail(df$ds)
 ```
-- create forecast: to forecast loading transform to exp(y)
+- create forecast: to forecast loading then transform result to ```exp(y)```
 ```
 future <- make_future_dataframe(m, periods = 7)
 tail(future)
 forecast <- predict(m, future)
 tail(forecast[c('ds', 'yhat', 'yhat_lower', 'yhat_upper')])
+```
+- plot the (natural logarithm of) results
+```
 plot(m, forecast)
 prophet_plot_components(m, forecast)
 ```
