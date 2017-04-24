@@ -4,7 +4,7 @@
 - install prerequisites
 <pre>install.packages("prophet")</pre>
 
-> install.packages("dplyr")
+```install.packages("dplyr")```
 - run learning routine
 > library(prophet)
 > library(dplyr)
