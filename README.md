@@ -49,6 +49,7 @@ prophet_plot_components(m, forecast)
 str(forecast)
 tail(forecast)
 head(forecast)
+names(forecast)
 
 ```
 
