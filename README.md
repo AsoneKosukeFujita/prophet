@@ -2,7 +2,7 @@
 - open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
 - run historical ferry loading data for specific sailing time and route
 - install prerequisites
-install.packages("prophet")
+> install.packages("prophet")
 install.packages("dplyr")
 - run learning routine
 library(prophet)
