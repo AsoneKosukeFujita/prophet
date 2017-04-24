@@ -13,12 +13,12 @@ library(dplyr)
 m <- prophet(df)
 df <- read.csv('C:/Users/aroug/Source/Repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
 ```
-- view learning data
+- view learning data frame
 ```
 m
 df
 ```
-- Selections of learning data
+- Selections of learning data frame
 ```
 class(df$ds)
 class(df$y)
