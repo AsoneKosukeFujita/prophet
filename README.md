@@ -64,4 +64,5 @@ exp(forecast$yhat)
 ```
 df1 <- data.frame(forecast$ds,exp(forecast$yhat))
 df1
+plot(df1,type="o")
 ```
