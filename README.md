@@ -27,7 +27,7 @@ head(df$ds)
 tail(df$y)
 tail(df$ds)
 ```
-- Create forecast loads with seasonality of 7 days, then transform result to ```exp(y)```
+- Forecast loads with seasonality of 7 days, then transform result to ```exp(y)```
 ```
 future <- make_future_dataframe(m, periods = 7)
 tail(future)
