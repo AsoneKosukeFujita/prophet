@@ -64,5 +64,5 @@ exp(forecast$yhat)
 ```
 df1 <- data.frame(forecast$ds,exp(forecast$yhat))
 df1
-plot(df1,type="o")
+plot(df1,type="o", xlab = "Weekly Seasonality", ylab = "Load %",main = "Forecast of Load % for Daily Sailing at 0620")
 ```
