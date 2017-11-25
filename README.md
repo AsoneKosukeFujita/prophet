@@ -1,4 +1,10 @@
 # Example forecast of ferry load for one specified sailing and route
+- If not installed:
+```
+sudo apt-get update
+sudo apt-get -y install r-base
+R
+```
 - Open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
 - Run historical ferry load data for specific sailing time and route
 - Install prerequisites
