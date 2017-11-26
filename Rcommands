@@ -1,13 +1,19 @@
 ```
 sudo -i R
+# test installation 
 install.packages('txtplot')
 library('txtplot')
 cars
 txtplot(cars[,1], cars[,2], xlab = "speed", ylab = "distance")
+
 # install the ggplot2 package
 install.packages("ggplot2")  
+
 # load the package
 library(ggplot2)
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+
 # check installed packages
 installed.packages()
 # list all packages where an update is available
