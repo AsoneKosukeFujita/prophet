@@ -1,8 +1,15 @@
 # Example forecast of ferry load for one specified sailing and route
-- If not installed:
+- If R not installed:
 ```
 sudo apt-get update
+sudo apt-get install r-cran-rcpp r-cran-inline r-cran-rcpp
+sudo apt-get install r-cran-rcppeigen
+sudo apt-get install liblapack-dev -y
+sudo apt-get install liblapack3 -y
+sudo apt-get install libopenblas-base -y
+sudo apt-get install libopenblas-dev -y 
 sudo apt-get -y install r-base
+sudo apt-get -y install rstudio
 R
 ```
 - Open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
