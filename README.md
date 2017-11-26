@@ -1,16 +1,19 @@
 # Example forecast of ferry load for one specified sailing and route
 - If R not installed:
 ```
+sudo apt-get -y install r-base
+sudo apt-get -y install rstudio
+R
+```
+- Prerequisites for installation of prophet package:
+```
 sudo apt-get update
-sudo apt-get install r-cran-rcpp r-cran-inline r-cran-rcpp
-sudo apt-get install r-cran-rcppeigen
 sudo apt-get install liblapack-dev -y
 sudo apt-get install liblapack3 -y
 sudo apt-get install libopenblas-base -y
 sudo apt-get install libopenblas-dev -y 
-sudo apt-get -y install r-base
-sudo apt-get -y install rstudio
-R
+sudo apt-get install r-cran-rcpp r-cran-inline r-cran-rcpp
+sudo apt-get install r-cran-rcppeigen
 ```
 - Open RGui or RStudio in local directory C:/Users/aroug/Source/Repos/prophet/examples/
 - Run historical ferry load data for specific sailing time and route
