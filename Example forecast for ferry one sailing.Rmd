@@ -14,6 +14,8 @@ library(prophet)
 library(dplyr)
 ```
 
+# Data from Feb 2017
+
 ```{r}
 m <- prophet(df)
 # df <- read.csv('/home/alastair/source/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
@@ -46,9 +48,51 @@ df1 <- data.frame(forecast$ds,exp(forecast$yhat))
 plot(df1,type="o", xlab = "Weekly Seasonality", ylab = "Load %",main = "Forecast of Load % for Daily Sailing at 0620")
 ```
 
+# Data from Nov 2017
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+```{r}
+library(prophet)
+library(dplyr)
+```
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+# df.nov <- read.csv('/home/alastair/source/prophet/examples/temp0720.csv') %>% mutate(y=log(y))
+df.nov <- read.csv('c:/users/aroug/source/repos/prophet/examples/temp0720.csv') %>% mutate(y=log(y))
+```
+
+```{r}
+m.nov <- prophet(df.nov)
+```
+
+```{r}
+df.nov
+```
+
+```{r}
+m.nov
+```
+
+```{r}
+future.nov <- make_future_dataframe(m.nov, periods = 7)
+```
+
+```{r}
+forecast.nov <- predict(m.nov, future.nov)
+```
+
+```{r}
+plot(m.nov, forecast.nov)
+```
+
+```{r}
+prophet_plot_components(m.nov, forecast.nov)
+```
+
+```{r}
+df1.nov <- data.frame(forecast.nov$ds,exp(forecast.nov$yhat))
+```
+
+```{r}
+plot(df1.nov,type="o", xlab = "Weekly Seasonality", ylab = "Load %",main = "Forecast of Load % for Daily Sailing at 0720")
+```
