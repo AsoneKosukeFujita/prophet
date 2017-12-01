@@ -17,9 +17,9 @@ library(dplyr)
 # Data from Feb 2017
 
 ```{r}
+df <- read.csv('/home/alastair/source/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
+# df <- read.csv('c:/users/aroug/source/repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
 m <- prophet(df)
-# df <- read.csv('/home/alastair/source/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
-df <- read.csv('c:/users/aroug/source/repos/prophet/examples/temp0620.csv') %>% mutate(y=log(y))
 ```
   
   
@@ -57,8 +57,8 @@ library(dplyr)
 ```
 
 ```{r}
-# df.nov <- read.csv('/home/alastair/source/prophet/examples/temp0720.csv') %>% mutate(y=log(y))
-df.nov <- read.csv('c:/users/aroug/source/repos/prophet/examples/temp0720.csv') %>% mutate(y=log(y))
+df.nov <- read.csv('/home/alastair/source/prophet/examples/temp0720.csv') %>% mutate(y=log(y))
+# df.nov <- read.csv('c:/users/aroug/source/repos/prophet/examples/temp0720.csv') %>% mutate(y=log(y))
 ```
 
 ```{r}
