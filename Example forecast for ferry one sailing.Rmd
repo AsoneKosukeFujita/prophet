@@ -96,3 +96,5 @@ df1.nov <- data.frame(forecast.nov$ds,exp(forecast.nov$yhat))
 ```{r}
 plot(df1.nov,type="o", xlab = "Weekly Seasonality", ylab = "Load %",main = "Forecast of Load % for Daily Sailing at 0720")
 ```
+
+
